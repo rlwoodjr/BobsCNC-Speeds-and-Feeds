@@ -1,0 +1,115 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BobsCNC_Speeds_and_Feeds.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Model" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Evolution Series - Makita</Value>
+    </Setting>
+    <Setting Name="Material" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Hardwood</Value>
+    </Setting>
+    <Setting Name="Units" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Inches</Value>
+    </Setting>
+    <Setting Name="Details" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Calculating Speeds and Feeds
+
+It is important to note that there are many variables when setting CNC cutting parameters. The values set should be thought of a starting values.  With experience, these values can be modified to find the sweet spot for the project that you are working on.
+
+Calculation details:
+
+Surface Feet per Minute (SFM) Is a number that sets the best RPM for cutting the material. This number varies depending on the manufacture of the tool and CNC machine. The calculation is:
+
+                SFM = RPM x 0.2618 x bit diameter (inches)
+
+ We have added default SFM values. If SFM value is modified, it will change the RPM of the spindle.
+
+Once the RPM is determined, you can calculate the feed rate with the formula
+
+                Feed Rate = RPM x Flute count x Chip load
+
+The flute count is the number of flutes on the bit, and the chip load is the size of the chip being removed. If the chip load value is modified, it will change the feed rate.
+
+The plunge rate determines the feed rate of the Z axis as the bit plunges into the material. A good rule of thumb is to set the plunge rate to 1/2 the feed rate. 
+
+                Plunge Rate = 0.5 x Feed Rate
+
+The step over is the space between the passes. The default step over value is set to 0.3 x bit diameter.  Stepover should be between 0.1 and 0.3 of the bit diameter
+
+               Stepover = 0.3 X bit diameter
+
+Depth per pass is determined by the CNC and the bit diameter. Larger heavy-duty CNC's can cut deeper per pass while smaller and lighter duty CNCs will cut at less depth per pass.
+</Value>
+    </Setting>
+    <Setting Name="WMA1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">There is a learning curve for cutting aluminum. The sweet spot for the cutting parameters is small and any deviation will reduce cutting quality and may damage the bit or workpiece.  We would recommend”
+
+- 30 psi of air flow through a nozzle as a minimum.  Mist cooling would be a better alternative. The bit needs to be kept cool and the chips need to be removed from the cutting area quickly.
+
+-  O-flute or single flute bit designed to cut aluminum. The high helix angle helps remove chips and the low flute count helps keep the feed rate manageable for higher RPMs.
+
+- The bit should be no larger than 1/8" (3mm) cutting diameter.
+
+- The workpiece must to be securely clamped to hold it in place and reduce any vibrations (If the part vibrates the cutting performance will be reduced and bit damage can occur.
+
+- There is an small range of optimal cut depths.  Cutting too deep will cause deflection or bit breakage and cutting too light will cause rubbing and heat buildup which will dull a bit.
+
+- If the feed rate is too slow, the aluminum can melt and built up on the bit, if the feed rate is too fast the bit may break.
+
+**************************************************************</Value>
+    </Setting>
+    <Setting Name="WMA2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">E Series has a fixed RPM.  The feed rate and plunge rate have been adjusted for this RPM.
+
+**************************************************************</Value>
+    </Setting>
+    <Setting Name="WMA3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Small bits can break easily. Reduce feed rate and depth of cut for longer bits with small diameters.
+
+**************************************************************
+
+
+</Value>
+    </Setting>
+    <Setting Name="WMA4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Large bits that are incorrectly set up can cause damage to the CNC and work piece. Reduce feed rate, stepover, and depth per pass.
+
+**************************************************************
+</Value>
+    </Setting>
+    <Setting Name="WMA5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CNC routers spin at a high RPM.  One or two flutes are recommended for most materials.  An O-flute or single flute bit is recommended for cutting aluminum.
+
+
+**************************************************************</Value>
+    </Setting>
+    <Setting Name="WMA6" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Chip loads above 0.040" (1mm) are not recommended.
+
+
+**************************************************************</Value>
+    </Setting>
+    <Setting Name="BitDiameter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0.125</Value>
+    </Setting>
+    <Setting Name="WMA7" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The spindle is not capable of spinning at this high of RPM.  The feed and plunge rate have been determined using the highest RPM for the selected spindle.  A larger diameter bit or a bit with more flutes until the optimal RPM can be set is recommended.
+
+
+
+**************************************************************
+
+</Value>
+    </Setting>
+    <Setting Name="WMA8" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The spindle is not capable of spinning at this low of RPM.  The feed and plunge rate have been determined using the lowest RPM for the selected spindle.  A smaller diameter bit or a bit with less flutes until the optimal RPM can be set is recommended.
+
+
+
+**************************************************************
+
+
+</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
